@@ -1,1 +1,3 @@
-bundle install
+require 'rubygems'
+require 'bundler/setup'
+require 'nokogiri'
