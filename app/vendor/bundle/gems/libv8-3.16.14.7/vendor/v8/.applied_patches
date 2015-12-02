@@ -1,0 +1,5 @@
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/patches/clang/no-unused-private-field.patch
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/patches/clang33/silence-nested-anon-types-and-unused-function-warnings.patch
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/patches/clang51/no-unused-variable.patch
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/patches/disable-building-tests.patch
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/patches/fPIC-for-static.patch

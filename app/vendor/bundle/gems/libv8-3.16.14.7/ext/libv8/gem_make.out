@@ -1,0 +1,44 @@
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
+creating Makefile
+Compiling v8 for x64
+Using python 2.7.10
+Using compiler: /usr/bin/c++ (clang version 7.0.2)
+In file included from ../src/conversions.cc:32:
+In file included from ../src/conversions-inl.h:43:
+../src/scanner.h:444:5: error: unused typedef '__StaticAssertTypedef__444' [-Werror,-Wunused-local-typedef]
+    STATIC_ASSERT(kCharacterLookaheadBufferSize == 1);
+    ^
+../src/checks.h:283:30: note: expanded from macro 'STATIC_ASSERT'
+#define STATIC_ASSERT(test)  STATIC_CHECK(test)
+                             ^
+../src/checks.h:251:5: note: expanded from macro 'STATIC_CHECK'
+    SEMI_STATIC_JOIN(__StaticAssertTypedef__, __LINE__)
+    ^
+../src/checks.h:240:32: note: expanded from macro 'SEMI_STATIC_JOIN'
+#define SEMI_STATIC_JOIN(a, b) SEMI_STATIC_JOIN_HELPER(a, b)
+                               ^
+../src/checks.h:241:39: note: expanded from macro 'SEMI_STATIC_JOIN_HELPER'
+#define SEMI_STATIC_JOIN_HELPER(a, b) a##b
+                                      ^
+<scratch space>:65:1: note: expanded from here
+__StaticAssertTypedef__444
+^
+1 error generated.
+make[1]: *** [/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/conversions.o] Error 1
+make: *** [x64.release] Error 2
+/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/ext/libv8/location.rb:36:in `block in verify_installation!': libv8 did not install properly, expected binary v8 archive '/Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/tools/gyp/libv8_base.a'to exist, but it was not found (Libv8::Location::Vendor::ArchiveNotFound)
+	from /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/ext/libv8/location.rb:35:in `each'
+	from /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/ext/libv8/location.rb:35:in `verify_installation!'
+	from /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/ext/libv8/location.rb:26:in `install!'
+	from extconf.rb:7:in `<main>'
+GYP_GENERATORS=make \
+	build/gyp/gyp --generator-output="out" build/all.gyp \
+	              -Ibuild/standalone.gypi --depth=. \
+	              -Dv8_target_arch=x64 \
+	              -S.x64  -Dv8_enable_backtrace=1 -Dv8_can_use_vfp2_instructions=true -Darm_fpu=vfpv2 -Dv8_can_use_vfp3_instructions=true -Darm_fpu=vfpv3 -Dwerror=''
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/allocation.o
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/atomicops_internals_x86_gcc.o
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/bignum.o
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/bignum-dtoa.o
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/cached-powers.o
+  CXX(target) /Users/dariankolev/Documents/AirFindGuildUp/app/vendor/bundle/gems/libv8-3.16.14.7/vendor/v8/out/x64.release/obj.target/preparser_lib/src/conversions.o

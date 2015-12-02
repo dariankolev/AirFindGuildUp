@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "passenger"
 gem 'rails', '4.0.0'
 gem 'therubyracer'
 
